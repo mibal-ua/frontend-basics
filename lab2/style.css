@@ -75,4 +75,66 @@
     left: 0px;
 }
 
+.painting-transform {
+    margin-top: 40px;
+}
 
+.base-transform {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: darkgray;
+}
+
+.center-hole-transform {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+
+    transform: translate(60px, -140px);
+}
+
+.painting-transform {
+    width: 300px;
+    height: 300px;
+}
+
+.border-hole-transform {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+}
+
+.north-transform {
+    transform: translate(75px, -310px);
+}
+
+.north-east-transform {
+    transform: translate(150px, -480px);
+}
+
+.east-transform {
+    transform: translate(180px, -255px);
+}
+
+.east-south-transform {
+    transform: translate(150px, -380px);
+}
+
+.south-transform {
+    transform: translate(75px, -200px);
+}
+
+.south-west-transform {
+    transform: translate(0px, -430px);
+}
+
+.west-transform {
+    transform: translate(-30px, -360px);
+}
+
+.north-west-transform {
+    transform: translate(0px, -630px);
+}
