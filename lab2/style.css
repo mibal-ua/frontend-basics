@@ -1,0 +1,78 @@
+.painting {
+    margin-top: 40px;
+}
+
+.base {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: darkgray;
+    position: relative;
+}
+
+.center-hole {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: white;
+
+    position: relative;
+    bottom: 140px;
+    left: 60px;
+}
+
+.painting {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+.border-hole {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    position: relative;
+}
+
+.north {
+    bottom: 310px;
+    left: 75px;
+}
+
+.north-east {
+    bottom: 480px;
+    left: 150px;
+}
+
+.east {
+    bottom: 255px;
+    left: 180px;
+}
+
+.east-south {
+    bottom: 380px;
+    left: 150px;
+}
+
+.south {
+    bottom: 200px;
+    left: 75px;
+}
+
+.south-west {
+    bottom: 430px;
+    left: 0px;
+}
+
+.west {
+    bottom: 360px;
+    left: -30px;
+}
+
+.north-west {
+    bottom: 630px;
+    left: 0px;
+}
+
+
