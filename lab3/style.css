@@ -1,0 +1,45 @@
+div {
+    align-content: center;
+    text-align: center;
+}
+
+.main-container {
+    margin-outside: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.left-image {
+    background-color: aquamarine;
+    float: left;
+    width: 33.3333%;
+    height: 800px;
+}
+
+.top-text {
+    background-color: lightskyblue;
+    float: right;
+    height: 100px;
+    width: 66.6666%;
+}
+
+.main-text {
+    background-color: yellow;
+    float: right;
+    height: 700px;
+    width: 66.6666%;
+}
+
+.bottom-text {
+    background-color: peachpuff;
+    float: left;
+    height: 100px;
+    width: 66.6666%;
+}
+
+.bottom-image {
+    background-color: pink;
+    float: right;
+    height: 100px;
+    width: 33.3333%;
+}
