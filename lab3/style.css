@@ -43,3 +43,54 @@ div {
     height: 100px;
     width: 33.3333%;
 }
+
+
+
+
+.main-container-flex {
+    margin-outside: 40px;
+    width: 100%;
+}
+
+.horizontal-flex {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.vertical-flex {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 66.6666%;
+}
+
+.left-image-flex {
+    background-color: aquamarine;
+    width: 33.3333%;
+    height: 800px;
+}
+
+.top-text-flex {
+    background-color: lightskyblue;
+    height: 100px;
+    width: 100%;
+}
+
+.main-text-flex {
+    background-color: yellow;
+    height: 700px;
+    width: 100%;
+}
+
+.bottom-text-flex {
+    background-color: peachpuff;
+    height: 100px;
+    width: 66.6666%;
+}
+
+.bottom-image-flex {
+    background-color: pink;
+    height: 100px;
+    width: 33.3333%;
+}
