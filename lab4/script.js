@@ -46,7 +46,11 @@ const container = () => document.getElementById('image-container');
 const lastImage = () => document.getElementById(`image-${lastImageIndex}`)
 
 const add = () => {
-    container().innerHTML += `<img id="image-${++lastImageIndex}" alt="Kramatorsk" src="https://upload.wikimedia.org/wikipedia/commons/c/c5/%D0%9F%D0%B0%D0%BB%D0%B0%D1%86_%D0%BA%D1%83%D0%BB%D1%8C%D1%82%D1%83%D1%80%D0%B8_%D1%82%D0%B0_%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B8%2C_%D0%9A%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%BE%D1%80%D1%81%D1%8C%D0%BA_DJI_0002.jpg" width="800">`;
+    container().innerHTML += (
+        `<div id="image-${++lastImageIndex}">
+            <img alt="Kramatorsk" src="https://v-variant.com.ua/wp-content/uploads/2023/01/Kramatorsk-viyna.jpg" width="400">
+        </div>`
+    );
 };
 
 const zoomIn = () => {
