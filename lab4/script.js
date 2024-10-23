@@ -53,7 +53,13 @@ const add = () => {
     );
 };
 
-let zoomState = 0;
+const hasClass = (name) => {
+    const image = lastImage();
+    if (!image) {
+        return false;
+    }
+    return image.childNodes[1].classList.contains(name);
+}
 
 const removeClass = (name) => {
     const image = lastImage();
@@ -72,22 +78,18 @@ const addClass = (name) => {
 };
 
 const zoomIn = () => {
-    if (zoomState === -1) {
+    if (hasClass('zoomed-out')) {
         removeClass('zoomed-out');
-        zoomState = 0;
-    } else if (zoomState === 0) {
+    } else if (!hasClass('zoomed')) {
         addClass('zoomed');
-        zoomState = 1;   
     }
 };
 
 const zoomOut = () => {
-    if (zoomState === 1) {
+    if (hasClass('zoomed')) {
         removeClass('zoomed');
-        zoomState = 0;
-    } else if (zoomState === 0) {
+    } else if (!hasClass('zoomed-out')) {
         addClass('zoomed-out');
-        zoomState = -1;
     }
 };
 
