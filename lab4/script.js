@@ -1,5 +1,6 @@
 'use strict';
 
+// task1
 const stylesForState = {
     0: {
         backgroundColor: 'blue',
@@ -33,4 +34,23 @@ const getStylesForElement = (element) => {
     const styles = stylesForState[currentState];
     state[element] = (currentState + 1) % 2;
     return styles;
+};
+
+
+// task2
+
+const add = () => {
+    
+};
+
+const zoomIn = () => {
+
+};
+
+const zoomOut = () => {
+
+};
+
+const remove = () => {
+
 };
