@@ -13,8 +13,8 @@ const stylesForState = {
 };
 
 const state = {
-    first: -1,
-    second: -1,
+    first: 0,
+    second: 0,
 };
 
 const toggleFirst = () => {
@@ -53,6 +53,15 @@ const add = () => {
     );
 };
 
+const remove = () => {
+    const image = lastImage();
+    if (image) {
+        image.remove();
+        lastImageIndex--;
+    }
+};
+
+
 const hasClass = (name) => {
     const image = lastImage();
     if (!image) {
@@ -90,13 +99,5 @@ const zoomOut = () => {
         removeClass('zoomed');
     } else if (!hasClass('zoomed-out')) {
         addClass('zoomed-out');
-    }
-};
-
-const remove = () => {
-    const image = lastImage();
-    if (image) {
-        image.remove();
-        lastImageIndex--;
     }
 };
