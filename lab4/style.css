@@ -1,0 +1,16 @@
+.image {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.image img {
+    width: 100%;
+    height: auto;
+}
+.zoomed {
+    transform: scale(2);
+}
+.zoomed-out {
+    transform: scale(0.5);
+}

@@ -47,18 +47,48 @@ const lastImage = () => document.getElementById(`image-${lastImageIndex}`)
 
 const add = () => {
     container().innerHTML += (
-        `<div id="image-${++lastImageIndex}">
+        `<div class="image" id="image-${++lastImageIndex}">
             <img alt="Kramatorsk" src="https://v-variant.com.ua/wp-content/uploads/2023/01/Kramatorsk-viyna.jpg" width="400">
         </div>`
     );
 };
 
+let zoomState = 0;
+
+const removeClass = (name) => {
+    const image = lastImage();
+    if (!image) {
+        return;
+    }
+    image.childNodes[1].classList.remove(name);
+};
+
+const addClass = (name) => {
+    const image = lastImage();
+    if (!image) {
+        return;
+    }
+    image.childNodes[1].classList.add(name);
+};
+
 const zoomIn = () => {
-    
+    if (zoomState === -1) {
+        removeClass('zoomed-out');
+        zoomState = 0;
+    } else if (zoomState === 0) {
+        addClass('zoomed');
+        zoomState = 1;   
+    }
 };
 
 const zoomOut = () => {
-
+    if (zoomState === 1) {
+        removeClass('zoomed');
+        zoomState = 0;
+    } else if (zoomState === 0) {
+        addClass('zoomed-out');
+        zoomState = -1;
+    }
 };
 
 const remove = () => {
