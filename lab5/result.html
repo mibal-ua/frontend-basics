@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<meta content="Балахон Михайло Олексійович" name="description">
+	<title>Балахон Михайло Олексійович, ІМ-22, 5, Варіант 10</title>
+	<meta content="info, student, lab, Kramatorsk" name="keywords">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="script.js"></script>
+</head>
+<body>
+<h1>Результати форми</h1>
+<div id="results"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const resultsDiv = document.getElementById('results');
+        const urlParams = new URLSearchParams(window.location.search);
+
+        for (const [key, value] of urlParams) {
+            const p = document.createElement('p');
+            p.textContent = `${key}: ${value}`;
+            resultsDiv.appendChild(p);
+        }
+    });
+</script>
+</body>
+</html>
