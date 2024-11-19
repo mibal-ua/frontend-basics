@@ -1,6 +1,7 @@
 'use strict';
 
 const table = document.getElementById('table');
+let isDoubleClick = false;
 
 initTable();
 
@@ -31,18 +32,28 @@ targetCell.addEventListener('mouseover', function () {
 });
 
 targetCell.addEventListener('click', function () {
-    colorPicker.click();
+    if (!isDoubleClick) {
+        setTimeout(() => {
+            if (!isDoubleClick) {
+                colorPicker.click();
+            }
+        }, 50);
+    }
 });
 
 colorPicker.addEventListener('input', function () {
     targetCell.style.backgroundColor = this.value;
 });
 
-targetCell.addEventListener('dblclick', function () {
+targetCell.addEventListener('dblclick', function (e) {
+    isDoubleClick = true;
     const row = this.parentNode;
     const startIndex = this.cellIndex;
 
     for (let i = startIndex; i < row.cells.length; i += 2) {
         row.cells[i].style.backgroundColor = getRandomColor();
     }
+    setTimeout(() => {
+        isDoubleClick = false;
+    }, 100);
 });
