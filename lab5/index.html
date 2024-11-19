@@ -15,30 +15,30 @@
 <form action='result.html' method="get">
 	1. ПІБ:
 	<br>
-	<input name="name" placeholder="" type="text" value="">
+	<input id="name" name="name" placeholder="" type="text" value="">
 	<br>
 
 	3. Група:
 	<br>
-	<input name="group" placeholder="" type="text" value="">
+	<input id="group" name="group" placeholder="" type="text" value="">
 	<br>
 
 	4. Контактний телефон
 	<br>
-	<input name="phone" type="text" value="">
+	<input id="phone" name="phone" type="text" value="">
 	<br>
 
 	8. Адреса
 	<br>
-	<input name="address" type="text" value="">
+	<input id="address" name="address" type="text" value="">
 	<br>
 
 	9. e-mail
 	<br>
-	<input name="email" type="text" value="">
+	<input id="email" name="email" type="text" value="">
 	<br>
 
-	<input onClick="Formdata(this.form)" type="submit" value="Надіслати">
+	<input onClick="return validate(this.form)" type="submit" value="Надіслати">
 </form>
 
 
