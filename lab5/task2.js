@@ -29,6 +29,7 @@ function getRandomColor() {
 
 targetCell.addEventListener('mouseover', function () {
     this.style.backgroundColor = getRandomColor();
+    updatePicker();
 });
 
 targetCell.addEventListener('click', function () {
@@ -41,8 +42,13 @@ targetCell.addEventListener('click', function () {
     }
 });
 
+function updatePicker() {
+    colorPicker.value = rgbToHex(targetCell.style.backgroundColor);
+}
+
 colorPicker.addEventListener('input', function () {
     targetCell.style.backgroundColor = this.value;
+    updatePicker();
 });
 
 targetCell.addEventListener('dblclick', function (e) {
@@ -53,7 +59,21 @@ targetCell.addEventListener('dblclick', function (e) {
     for (let i = startIndex; i < row.cells.length; i += 2) {
         row.cells[i].style.backgroundColor = getRandomColor();
     }
+    updatePicker();
     setTimeout(() => {
         isDoubleClick = false;
     }, 100);
 });
+
+function rgbToHex(rgb) {
+    // Витягуємо числа з rgb рядка
+    const values = rgb.match(/\d+/g);
+
+    // Конвертуємо кожне число в hex і додаємо нулі спереду якщо потрібно
+    const r = Number(values[0]).toString(16).padStart(2, '0');
+    const g = Number(values[1]).toString(16).padStart(2, '0');
+    const b = Number(values[2]).toString(16).padStart(2, '0');
+
+    // Повертаємо результат у форматі #rrggbb
+    return `#${r}${g}${b}`;
+}

@@ -7,3 +7,11 @@ td {
     border: 1px solid black;
     text-align: center;
 }
+
+#colorPicker {
+    width: 320px;
+    height: 50px;
+    padding: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
