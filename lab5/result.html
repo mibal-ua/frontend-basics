@@ -11,17 +11,25 @@
 	<script src="script.js"></script>
 </head>
 <body>
-<h1>Результати форми</h1>
+<h1>Введені дані:</h1>
 <div id="results"></div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    const keyTranslation = {
+        name: 'Ім\'я',
+        group: 'Група',
+        phone: 'Телефон',
+        address: 'Адреса',
+        email: 'Email',
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
         const resultsDiv = document.getElementById('results');
         const urlParams = new URLSearchParams(window.location.search);
 
         for (const [key, value] of urlParams) {
             const p = document.createElement('p');
-            p.textContent = `${key}: ${value}`;
+            p.textContent = `${keyTranslation[key]}: ${value}`;
             resultsDiv.appendChild(p);
         }
     });
