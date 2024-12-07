@@ -488,3 +488,30 @@ h1, h2, h3, h4, h5,
     color: black; /* Adjust arrow color */
     font-weight: bold;
 }
+
+/* About us */
+
+.feature-icon .wrap-icon {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 70px;
+    flex: 0 0 70px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    text-align: center;
+    background: #f37121;
+    color: #fff;
+    font-size: 40px;
+}
+
+.feature-icon h3 {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 0;
+    color: #f37121;
+}
+
+.feature-icon p {
+    color: #848484;
+}
