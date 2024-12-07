@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5,
     color: #000;
 }
 
+.text-black {
+    color: #000 !important;
+}
+
 /* Navbar */
 .site-logo {
     position: relative;
@@ -347,4 +351,27 @@ h1, h2, h3, h4, h5,
 
 .social-wrap .social-item:hover {
     background: #000;
+}
+
+/* Main content */
+.site-section {
+    padding: 2.5em 0;
+}
+
+@media (min-width: 768px) {
+    .site-section {
+        padding: 5em 0;
+    }
+}
+
+.caption {
+    color: #f37121;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: .2rem;
+    font-weight: 700;
+}
+
+.auctions-entry {
+/*    todo*/
 }
