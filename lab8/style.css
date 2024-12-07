@@ -418,3 +418,62 @@ h1, h2, h3, h4, h5,
 .auctions-entry .item .bids {
     color: #848484;
 }
+
+/* How to */
+.step {
+    position: relative;
+}
+
+.step .wrap-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    line-height: 90px;
+    text-align: center;
+    display: inline-block;
+    background: #f37121;
+    color: #fff;
+    position: relative; /* Enable precise positioning for the image */
+    overflow: hidden; /* Ensure image stays within the circle */
+}
+
+.step .wrap-icon img {
+    width: 60%; /* Adjust size as needed */
+    height: auto; /* Keep aspect ratio */
+    position: absolute; /* For fine alignment */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to true center */
+    object-fit: contain; /* Prevent distortion */
+    border-radius: 50%; /* Optional, for smooth circular fit */
+}
+
+
+.step h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.step p {
+    line-height: 1.5;
+    color: #848484;
+    
+}
+
+.step .row {
+    display: flex; /* Arrange the content in a row */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between the elements */
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+/* Icons */
+.arrow-icon span {
+    font-size: 30px; /* Adjust size of the arrow */
+    color: black; /* Adjust arrow color */
+    font-weight: bold;
+}
