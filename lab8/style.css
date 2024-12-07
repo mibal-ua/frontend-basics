@@ -503,6 +503,8 @@ h1, h2, h3, h4, h5,
     background: #f37121;
     color: #fff;
     font-size: 40px;
+    position: relative; /* Enable precise positioning for the image */
+    overflow: hidden; /* Ensure image stays within the circle */
 }
 
 .feature-icon h3 {
@@ -514,4 +516,14 @@ h1, h2, h3, h4, h5,
 
 .feature-icon p {
     color: #848484;
+}
+
+.feature-icon .wrap-icon img {
+    width: 60%; /* Adjust size as needed */
+    height: auto; /* Keep aspect ratio */
+    position: absolute; /* For fine alignment */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to true center */
+    object-fit: contain; /* Prevent distortion */
 }
