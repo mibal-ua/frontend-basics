@@ -424,7 +424,9 @@ h1, h2, h3, h4, h5,
     position: relative;
 }
 
-.step .wrap-icon {
+.step .wrap-icon,
+.step .wrap-icon-sm
+{
     width: 90px;
     height: 90px;
     border-radius: 50%;
@@ -448,6 +450,15 @@ h1, h2, h3, h4, h5,
     border-radius: 50%; /* Optional, for smooth circular fit */
 }
 
+.step .wrap-icon-sm img {
+    width: 40%; /* Adjust size as needed */
+    height: auto; /* Keep aspect ratio */
+    position: absolute; /* For fine alignment */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to true center */
+    object-fit: contain; /* Prevent distortion */
+}
 
 .step h3 {
     font-size: 20px;
