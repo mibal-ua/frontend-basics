@@ -527,3 +527,46 @@ h1, h2, h3, h4, h5,
     transform: translate(-50%, -50%); /* Adjust to true center */
     object-fit: contain; /* Prevent distortion */
 }
+
+/* Testimonials */
+.section-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 4rem 0;
+}
+
+.section-bg.semi-transparent-back {
+    position: relative;
+}
+
+.section-bg.semi-transparent-back:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f37121;
+    opacity: .9;
+    z-index: 0;
+}
+
+.section-bg.semi-transparent-back > .container {
+    z-index: 2;
+}
+
+.section-bg.semi-transparent-back .icon {
+    font-size: 3.5rem;
+    color: #f37121;
+}
+
+.section-bg.semi-transparent-back h3 {
+    font-size: 20px;
+    color: #f37121;
+    margin-bottom: 30px;
+}
+
+.section-bg.semi-transparent-back p {
+    color: rgba(255, 255, 255, 0.5);
+}
